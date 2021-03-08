@@ -1,0 +1,11 @@
+name: jarvis_asr
+description: Dart gRPC sample client and server.
+publish_to: none
+
+environment:
+  sdk: '>=2.8.0 <3.0.0'
+
+dependencies:
+  async: ^2.2.0
+  grpc: ^3.0.0
+  protobuf: ^2.0.0-nullsafety
