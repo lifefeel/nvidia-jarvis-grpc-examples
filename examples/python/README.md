@@ -21,3 +21,7 @@
 python speech_recognition.py
 ```
 
+## Reference
+
+Python examples were created by referring to Jarvis `speech_API_demo.ipynb` of jarvis-speech-client Docker container.
+
