@@ -6,6 +6,12 @@
 pub get
 ```
 
+or
+
+```
+dart pub get
+```
+
 ## Run
 
 ```

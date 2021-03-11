@@ -15,8 +15,6 @@ Future<void> main(List<String> args) async {
   final file = new File('../../wav/sample.wav');
   List<int> inputStream = file.readAsBytesSync();
 
-  final name = args.isNotEmpty ? args[0] : 'world';
-
   var config = RecognitionConfig();
   config.encoding = AudioEncoding.LINEAR_PCM;
   config.sampleRateHertz = 16000;
