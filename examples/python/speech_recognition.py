@@ -2,8 +2,11 @@ import io
 import librosa
 import grpc
 import sys
+import os
 
-sys.path.append('jarvis_api')
+current_path = os.path.dirname(os.path.realpath(__file__))
+
+sys.path.append(os.path.join(current_path, 'jarvis_api'))
 
 # ASR proto
 import jarvis_api.jarvis_asr_pb2 as jasr
@@ -15,9 +18,10 @@ channel = grpc.insecure_channel('localhost:50051')
 
 jarvis_asr = jasr_srv.JarvisASRStub(channel)
 
-path = "../../wav/sample.wav"
-audio, sr = librosa.core.load(path, sr=None)
-with io.open(path, 'rb') as fh:
+wav_file = os.path.join(current_path, "../../wav/sample.wav")
+
+audio, sr = librosa.core.load(wav_file, sr=None)
+with io.open(wav_file, 'rb') as fh:
     content = fh.read()
 
     
